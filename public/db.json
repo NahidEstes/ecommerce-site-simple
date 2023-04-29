@@ -1,0 +1,19 @@
+{
+  "people": [
+    {
+      "product_name": "Nordic Chair",
+      "product_price": 50,
+      "img": "images/product-1.png"
+    },
+    {
+      "product_name": "Ergonomic Chair",
+      "product_price": 70,
+      "img": "images/product-2.png"
+    },
+    {
+      "product_name": "Furnish Chair",
+      "product_price": 80,
+      "img": "images/product-3.png"
+    }
+  ]
+}

@@ -9,8 +9,8 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex items-center justify-between">
+    <div className="lg:bg-neutral ">
+      <div className="relative flex items-center justify-between px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
           <BoltIcon className="h-6 w-6 text-blue-500" />
@@ -20,12 +20,14 @@ const Header = () => {
         </Link>
 
         {/* Nav Items Section */}
-        <ul className="items-center hidden space-x-8 lg:flex duration-500">
+        <ul className="items-center hidden space-x-10 font-semibold lg:flex duration-500 ">
           <li>
             <NavLink
               to="/"
               title="Home Link"
-              className={({ isActive }) => (isActive ? "active" : "default")}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-slate-300"
+              }
             >
               Home
             </NavLink>
@@ -33,7 +35,9 @@ const Header = () => {
           <li>
             <NavLink
               to="/books"
-              className={({ isActive }) => (isActive ? "active" : "default")}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-slate-300"
+              }
             >
               Books
             </NavLink>
@@ -41,7 +45,9 @@ const Header = () => {
           <li>
             <NavLink
               to="/about"
-              className={({ isActive }) => (isActive ? "active" : "default")}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-slate-300"
+              }
             >
               About us
             </NavLink>
@@ -49,7 +55,9 @@ const Header = () => {
           <li>
             <NavLink
               to="/blogs"
-              className={({ isActive }) => (isActive ? "active" : "default")}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-slate-300"
+              }
             >
               Blogs
             </NavLink>
@@ -57,12 +65,17 @@ const Header = () => {
           <li>
             <NavLink
               to="/shop"
-              className={({ isActive }) => (isActive ? "active" : "default")}
+              className={({ isActive }) =>
+                isActive ? "text-white underline" : "text-slate-300"
+              }
             >
               Shop
             </NavLink>
           </li>
         </ul>
+        <div>
+          <Link to="/cart">Cart</Link>
+        </div>
         {/* Mobile Navbar Section */}
         <div className="lg:hidden">
           {/* Dropdown Open Button */}
@@ -93,7 +106,7 @@ const Header = () => {
                       title="Close Menu"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <XMarkIcon className="w-5 text-gray-600" />
+                      <XMarkIcon className="w-5 " />
                     </button>
                   </div>
                 </div>
